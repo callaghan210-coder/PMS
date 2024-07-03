@@ -2,7 +2,7 @@ table 60150 Tenant
 {
     Caption = 'Tenant';
     DataClassification = ToBeClassified;
-    
+
     fields
     {
         field(1; "Tenent No."; Code[20])
@@ -28,6 +28,7 @@ table 60150 Tenant
         field(6; Gender; Option)
         {
             Caption = 'Gender';
+            OptionMembers = Male,Female,Other;
         }
         field(7; Age; Integer)
         {
@@ -49,9 +50,16 @@ table 60150 Tenant
         {
             Caption = 'Registration No.';
         }
-        field(12; "Type"; Option)
+        field(12; "Tenant Type"; Option)
         {
-            Caption = 'Type';
+            DataClassification = ToBeClassified;
+            OptionMembers = Corporate,Residential,Commercial;
+        }
+
+        field(13; "Tenant Status"; Option)
+        {
+            DataClassification = ToBeClassified;
+            OptionMembers = Active,Inactive,Pending;
         }
     }
     keys
